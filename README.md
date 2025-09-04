@@ -67,3 +67,57 @@ export default tseslint.config([
   },
 ])
 ```
+
+# React Portfolio
+
+A collection of **React projects and practice demos** showcasing different concepts, components, and integrations.  
+This repository serves both as a **learning journey** and a **portfolio** to highlight my skills in React development.
+
+---
+
+## 📂 Projects Included
+- **Counter Demo** → basic state management with hooks.  
+- **Todo List** → controlled components, lists, and CRUD basics.  
+- **Clock Demo** → working with side effects and intervals.  
+- **Pokédex** → API integration, pagination, and dynamic UI.  
+- **Dynamic JSON Form** → schema-driven form rendering with validation.  
+- **Theme Switcher** → context API usage and custom hooks for theming.  
+- **Rick & Morty Explorer** → data fetching with TanStack Query, pagination, and prefetching.  
+
+*(More projects will be added as I continue practicing and learning.)*
+
+---
+
+## 🛠️ Tech Stack
+- **React 18+** with TypeScript  
+- **React Router** for SPA navigation  
+- **TanStack Query (React Query)** for data fetching & caching  
+- **Bootstrap 5** for styling  
+- **Vite** as the build tool  
+
+---
+
+## 🚀 Getting Started
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/<your-username>/react-portfolio.git
+cd react-portfolio
+npm install
+npm run dev
+```
+
+The app will be available at [http://localhost:5173](http://localhost:5173).
+
+---
+
+## 🎯 Goals
+- Build reusable components and patterns.  
+- Explore real-world libraries like TanStack Query, React Hook Form, etc.  
+- Document learning progress through small, focused demos.  
+- Showcase React skills for interviews and portfolio purposes.  
+
+---
+
+## 📌 Notes
+This repository is a **work in progress**. New features and projects will be added over time as part of continuous learning and experimentation.
