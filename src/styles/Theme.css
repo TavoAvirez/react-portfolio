@@ -1,0 +1,31 @@
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #111827;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --accent: #0d6efd;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --card-bg: #0f172a;
+  --card-border: #1f2937;
+  --accent: #60a5fa;
+}
+
+/* Helpers genéricos */
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Ejemplos de uso */
+.card {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+}
+a, .btn-link {
+  color: var(--accent);
+}
