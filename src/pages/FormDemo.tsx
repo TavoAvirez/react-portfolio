@@ -326,9 +326,9 @@ export default function FormDemo() {
             </div>
 
             <div className="d-flex gap-2">
-              <button className="btn" type="submit">Register</button>
+              <button className="btn btn-primary" type="submit">Register</button>
               <button
-                className="btn"
+                className="btn btn-outline-secondary"
                 type="button"
                 onClick={() => { setForm({ ...form, name: "", email: "", password: "" }); }}
               >

@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from './context/themeContext.tsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
@@ -13,12 +13,12 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <Router>
       <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <App />
       </ThemeProvider>
       </QueryClientProvider>
-    </BrowserRouter>
+    </Router>
   </StrictMode>,
 )

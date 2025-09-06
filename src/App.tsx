@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import './styles/App.css'
 import './styles/Theme.css'
 import Navbar from './components/Navbar'
-import CardDemo from './pages/CardDemo'
+
 import CounterDemo from './pages/CounterDemo'
 import TodoList from './pages/ToDoList'
 import ClockDemo from './pages/ClockDemo'
@@ -20,7 +20,8 @@ function App() {
       <Navbar />
       <div style={{ padding: 16 }}>
         <Routes>
-          <Route path="/" element={<CardDemo />} />
+          {/* <Route path="/" element={<CardDemo />} /> */}
+          <Route path="/" element={<CounterDemo />} />
           <Route path="/counter" element={<CounterDemo />} />
           <Route path="/todo" element={<TodoList />} />
           <Route path="/clock" element={<ClockDemo />} />
