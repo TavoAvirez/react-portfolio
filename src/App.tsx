@@ -11,6 +11,7 @@ import FormDemo from './pages/FormDemo'
 import DynamicFormDemo from './pages/DynamicForm'
 import RMList from './pages/RickMortyList'
 import RMDetail from './components/RickMorty/RickMortyDetail'
+import MemoryGame from './pages/MemoryGame'
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/dynamic-form" element={<DynamicFormDemo />} />
           <Route path="/rick-morty" element={<RMList />} />
           <Route path="/rick-morty/:id" element={<RMDetail />} />
+          <Route path="/memory-game" element={<MemoryGame />} />
         </Routes>
       </div>
     </>

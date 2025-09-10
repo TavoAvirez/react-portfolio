@@ -5,10 +5,8 @@ import { useState } from "react";
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
-
-  // Utility to build nav-link classes with active state
-  const linkClass = ({ isActive }: { isActive: boolean }) =>
-    `nav-link px-2 py-2 ${isActive ? "active fw-semibold" : ""}`;
+  const linkStyle: React.CSSProperties = { padding: '8px 12px', textDecoration: 'none' };
+  const activeStyle: React.CSSProperties = { fontWeight: 'bold', textDecoration: 'underline' };
 
   // Close the menu after clicking a link on mobile
   const handleNavClick = () => setOpen(false);
@@ -39,13 +37,14 @@ export default function Navbar() {
             {/* Uncomment if you want Card page */}
             {/* <li className="nav-item"><NavLink to="/" className={linkClass} onClick={handleNavClick}>Card</NavLink></li> */}
 
-            <li className="nav-item"><NavLink to="/counter" className={linkClass} onClick={handleNavClick}>Counter</NavLink></li>
-            <li className="nav-item"><NavLink to="/todo" className={linkClass} onClick={handleNavClick}>ToDo List</NavLink></li>
-            <li className="nav-item"><NavLink to="/clock" className={linkClass} onClick={handleNavClick}>ClockDemo</NavLink></li>
-            <li className="nav-item"><NavLink to="/pokeapi" className={linkClass} onClick={handleNavClick}>PokeAPI</NavLink></li>
-            <li className="nav-item"><NavLink to="/rick-morty" className={linkClass} onClick={handleNavClick}>Rick & Morty</NavLink></li>
-            <li className="nav-item"><NavLink to="/form" className={linkClass} onClick={handleNavClick}>FormDemo</NavLink></li>
-            <li className="nav-item"><NavLink to="/dynamic-form" className={linkClass} onClick={handleNavClick}>DynamicFormDemo</NavLink></li>
+            <li className="nav-item"><NavLink to="/counter" style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeStyle : {}) })}  onClick={handleNavClick}>Counter</NavLink></li>
+            <li className="nav-item"><NavLink to="/todo" style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeStyle : {}) })}  onClick={handleNavClick}>ToDo List</NavLink></li>
+            <li className="nav-item"><NavLink to="/clock" style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeStyle : {}) })}  onClick={handleNavClick}>ClockDemo</NavLink></li>
+            <li className="nav-item"><NavLink to="/pokeapi" style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeStyle : {}) })}  onClick={handleNavClick}>PokeAPI</NavLink></li>
+            <li className="nav-item"><NavLink to="/rick-morty" style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeStyle : {}) })}  onClick={handleNavClick}>Rick & Morty</NavLink></li>
+            <li className="nav-item"><NavLink to="/form" style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeStyle : {}) })}  onClick={handleNavClick}>FormDemo</NavLink></li>
+            <li className="nav-item"><NavLink to="/dynamic-form" style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeStyle : {}) })}  onClick={handleNavClick}>DynamicFormDemo</NavLink></li>
+            <li className="nav-item"><NavLink to="/memory-game" style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeStyle : {}) })}  onClick={handleNavClick}>MemoryGame</NavLink></li>
           </ul>
 
           {/* Right: theme switch */}
