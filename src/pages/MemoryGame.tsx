@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, memo } from "react";
+import { useEffect, useRef, useState, memo } from "react";
 import "../styles/MemoryGame.css";
 
 type Difficulty = "easy" | "normal" | "hard";
